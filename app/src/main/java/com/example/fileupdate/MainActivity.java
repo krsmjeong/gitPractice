@@ -28,10 +28,6 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Uri uri = FileProvider.getUriForFile(MainActivity.this, BuildConfig.APPLICATION_ID, tempFile);
 //                Uri uri = Uri.fromFile(tempFile);
-                Log.d(TAG, "onClick: " + uri);
-                Log.d(TAG, "onClick: " + getExternalCacheDir());
-                Log.d(TAG, "onClick: " + tempFile);
-                Log.d(TAG, "onClick: " + BuildConfig.APPLICATION_ID);
                 Intent intent = new Intent(Intent.ACTION_VIEW);
 //                            Uri uri = Uri.fromFile(tempFile);
                 intent.setDataAndType(uri, "application/vnd.android.package-archive");
